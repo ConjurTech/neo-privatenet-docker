@@ -38,6 +38,8 @@ done
 # Definition of standard neo-cli filenames and URL based on the version
 NEO_CLI_ZIPFN="neo-release-${NEO_CLI_VERSION}.zip"
 NEO_CLI_URL="https://github.com/neo-project/neo-cli/releases/download/v${NEO_CLI_VERSION}/neo-cli-linux-x64.zip"
+IMPORT_PLUGIN_URL="https://github.com/neo-project/neo-plugins/releases/download/v${NEO_CLI_VERSION}/ImportBlocks.zip"
+POLICY_PLUGIN_URL="https://github.com/neo-project/neo-plugins/releases/download/v${NEO_CLI_VERSION}/SimplePolicy.zip"
 
 if [ -z "$NEO_CLI_CUSTOM_ZIPFN" ]; then
     echo "Using downloaded neo-cli v${NEO_CLI_VERSION}"
@@ -54,6 +56,9 @@ else
     echo "Using custom neo-cli.zip: $NEO_CLI_CUSTOM_ZIPFN"
     cp $NEO_CLI_CUSTOM_ZIPFN ./neo-cli.zip
 fi
+
+wget $IMPORT_PLUGIN_URL
+wget $POLICY_PLUGIN_URL
 
 if [ -z "$DISABLE_CACHE" ]; then
   docker build -t neo-privnet:${NEO_CLI_VERSION} .
