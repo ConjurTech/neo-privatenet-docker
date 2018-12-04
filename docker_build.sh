@@ -56,7 +56,7 @@ else
 fi
 
 if [ -z "$DISABLE_CACHE" ]; then
-  docker build -t neo-privnet .
+  docker build -t neo-privnet:${NEO_CLI_VERSION} .
 else
   echo "docker build no cache"
   docker build --no-cache -t neo-privnet .
