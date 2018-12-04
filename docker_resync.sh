@@ -23,5 +23,10 @@ docker run -d \
   -v neo-2_9_2-blockchain-2:/opt/node2/neo-cli/Chain \
   -v neo-2_9_2-blockchain-3:/opt/node3/neo-cli/Chain \
   -v neo-2_9_2-blockchain-4:/opt/node4/neo-cli/Chain \
+  --mount type=bind,source=/opt/chain.acc,target=/opt/node1/neo-cli/chain.acc,readonly \
+  --mount type=bind,source=/opt/chain.acc,target=/opt/node2/neo-cli/chain.acc,readonly \
+  --mount type=bind,source=/opt/chain.acc,target=/opt/node3/neo-cli/chain.acc,readonly \
+  --mount type=bind,source=/opt/chain.acc,target=/opt/node4/neo-cli/chain.acc,readonly \
   -h $CONTAINER_NAME \
-  $CONTAINER_NAME:$TAG_NAME
+  $CONTAINER_NAME:$TAG_NAME \
+  /opt/resync.sh
