@@ -73,6 +73,7 @@ ADD ./wallets/wallet4.json /opt/node4/neo-cli/
 RUN wget https://s3.amazonaws.com/neo-experiments/neo-privnet.wallet
 ADD ./scripts/run.sh /opt/
 ADD ./scripts/resync.sh /opt/
+ADD ./scripts/start_node.sh /opt/
 ADD ./scripts/start_consensus_node.sh /opt/
 ADD ./scripts/claim_neo_and_gas_fixedwallet.py /neo-python/
 ADD ./scripts/claim_gas_fixedwallet.py /neo-python/
