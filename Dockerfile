@@ -51,15 +51,15 @@ RUN unzip -q -d /opt/node2 /opt/neo-cli.zip
 RUN unzip -q -d /opt/node3 /opt/neo-cli.zip
 RUN unzip -q -d /opt/node4 /opt/neo-cli.zip
 
-RUN unzip -q -d /opt/node1/neo-cli/Plugins /opt/ImportBlocks.zip
-RUN unzip -q -d /opt/node2/neo-cli/Plugins /opt/ImportBlocks.zip
-RUN unzip -q -d /opt/node3/neo-cli/Plugins /opt/ImportBlocks.zip
-RUN unzip -q -d /opt/node4/neo-cli/Plugins /opt/ImportBlocks.zip
+RUN unzip -q -d /opt/node1/neo-cli /opt/ImportBlocks.zip
+RUN unzip -q -d /opt/node2/neo-cli /opt/ImportBlocks.zip
+RUN unzip -q -d /opt/node3/neo-cli /opt/ImportBlocks.zip
+RUN unzip -q -d /opt/node4/neo-cli /opt/ImportBlocks.zip
 
-RUN unzip -q -d /opt/node1/neo-cli/Plugins /opt/SimplePolicy.zip
-RUN unzip -q -d /opt/node2/neo-cli/Plugins /opt/SimplePolicy.zip
-RUN unzip -q -d /opt/node3/neo-cli/Plugins /opt/SimplePolicy.zip
-RUN unzip -q -d /opt/node4/neo-cli/Plugins /opt/SimplePolicy.zip
+RUN unzip -q -d /opt/node1/neo-cli /opt/SimplePolicy.zip
+RUN unzip -q -d /opt/node2/neo-cli /opt/SimplePolicy.zip
+RUN unzip -q -d /opt/node3/neo-cli /opt/SimplePolicy.zip
+RUN unzip -q -d /opt/node4/neo-cli /opt/SimplePolicy.zip
 
 # Remove zip neo-cli packages
 RUN rm /opt/*.zip
