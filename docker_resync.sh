@@ -29,4 +29,4 @@ docker run -d \
   --mount type=bind,source=/opt/chain.acc,target=/opt/node4/neo-cli/chain.acc,readonly \
   -h $CONTAINER_NAME \
   $CONTAINER_NAME:$TAG_NAME \
-  /opt/resync.sh
+  /bin/bash /opt/resync.sh
