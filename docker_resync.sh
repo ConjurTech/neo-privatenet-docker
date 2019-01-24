@@ -3,7 +3,7 @@
 # Start a Docker container which runs the four consensus nodes. If it is
 # already running, it will be destroyed first.
 #
-TAG_NAME="2.9.2"
+TAG_NAME="2.9.4"
 CONTAINER_NAME="neo-privnet"
 CONTAINER=$(docker ps -aqf name=$CONTAINER_NAME)
 
